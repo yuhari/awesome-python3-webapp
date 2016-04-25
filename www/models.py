@@ -37,7 +37,7 @@ class Blog(Model):
 class Comment(Model):
     __table__ = 'comments'
     
-    id = StringField(primary_true=True, default=next_id)
+    id = StringField(primary_key=True, default=next_id)
     blog_id = StringField()
     user_id = StringField()
     user_name = StringField()

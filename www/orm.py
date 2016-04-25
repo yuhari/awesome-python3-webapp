@@ -204,6 +204,7 @@ class Model(dict, metaclass=ModelMetaclass):
             sql.append(where)
         if args is None:
             args = []
+        limit = kw.get('limit', None)
         if limit :
             sql.append('limit')
             if isinstance(limit, int):
