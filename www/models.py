@@ -7,7 +7,7 @@ from orm import Model, StringField, BooleanField, FloatField, TextField
 
 def next_id():
     # make rand str to be id
-    return '%015d%s000' % (int(time.time) * 1000, uuid.uuid4().hex)
+    return '%015d%s000' % (int(time.time()*1000), uuid.uuid4().hex)
 
 ### construct User, Blog, Comment models
 class User(Model):
